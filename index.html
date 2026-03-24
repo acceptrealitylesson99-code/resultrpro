@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Score cA;lculator</title>
 </head>
 <style>
     
@@ -32,9 +32,13 @@ border-color: #2564eb;
 #output{
     background-color: #2564ebde;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
 }
 .box{
-    margin-top: 80px;
+width: 800px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -42,30 +46,48 @@ border-color: #2564eb;
     font-size: 30px;
     font-weight: bold;
 }
-.container{
-    margin-top: 50px;
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+
+}
+.navbar{
+    background-color: #2564eb;
 }
 </style>
 <body>
 
-<nav class="navbar bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light fw-bold">ResultPro</a>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" class="nav-link disabled" aria-disabled="true">
-      <button class="btn btn-outline-success" type="submit" class="nav-link disabled" aria-disabled="true">Search</button>
-    </form>
-  </div>
-</nav>          
-
-
-
-<div class="container p-5 rounded-5 ">
-    <div class="row">
-        <div class="col-md-4 p-3  text-center text-white" id="output">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">ScoreCalculator</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class=" hero container p-5 rounded-5 ">
+    <div class=" box row">
+        <div class="col-md-4  p-3 text-center text-white" id="output">
             <h1 class="text-center text-white"> Result</h1>
-            <div class="box">
+            <div class="box1">
 Percentage: <span id="per"></span><br>
             
             Grade: <span id="grade"></span><br>
@@ -76,11 +98,11 @@ Percentage: <span id="per"></span><br>
         </div>
         <div class="col-md-6 p-3  " id="marks" >
             
-          <h5>Math</h5> <input type="number" name="" id="math" class="rounded rounded-5">
-      <h5>Urdu</h5>  <input type="number" name="" id="urdu"class="rounded rounded-5">
-         <h5>English</h5>  <input type="number" name="" id="eng"class="rounded rounded-5">
-  <h5>Sindhi</h5> <input type="number" name="" id="sindhi"class="rounded rounded-5">
-         <h5>Computer</h5>  <input type="number" name="" id="comp" class="rounded rounded-5 mb-5">
+          <h5>Math</h5> <input type="number" name="" id="math" class="rounded rounded-5 col-12">
+      <h5>Urdu</h5>  <input type="number" name="" id="urdu"class="rounded rounded-5 col-12">
+         <h5>English</h5>  <input type="number" name="" id="eng"class="rounded rounded-5 col-12">
+  <h5>Sindhi</h5> <input type="number" name="" id="sindhi"class="rounded rounded-5 col-12">
+         <h5>Computer</h5>  <input type="number" name="" id="comp" class="rounded rounded-5 mb-5 col-12">
 
 
 
